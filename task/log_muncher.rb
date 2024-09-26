@@ -131,7 +131,7 @@ class ElectionLogProcessor
   end
 
   def find_similar_names(name)
-    @name_frequencies.keys.select { |candidate| DamerauLevenshtein.distance(name, candidate) <= 5 }
+    @name_frequencies.keys.select { |candidate| DamerauLevenshtein.distance(name, candidate) <= 2 }
   end
 
   def select_representative(names)
